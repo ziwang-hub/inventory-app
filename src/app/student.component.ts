@@ -6,21 +6,17 @@ import { Component, EventEmitter } from '@angular/core';
     inputs: ['name'],
     outputs: ['studentSelected'],
     template: `
-      <p (click)="onClicked()">{{name}}</p>
+    <p (click)="onClicked()">{{name}}</p>
     `
 })
-
 export class Student {
     name: string;
     studentSelected: EventEmitter<string>;
-
     constructor() {
         this.studentSelected = new EventEmitter();
     }
 
     onClicked() {
         this.studentSelected.emit(this.name);
-
     }
-
 }

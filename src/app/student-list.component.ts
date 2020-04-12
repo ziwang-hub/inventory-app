@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     <student [name]="studentNames[0]" (studentSelected)="onStudentSelected($event)"></student>
     `
 })
-
 export class StudentList {
     studentNames = ['张三', '李四', '王五'];
 
@@ -17,4 +16,5 @@ export class StudentList {
     onStudentSelected(name: string) {
         console.log('选中了学生:' + name);
     }
+
 }
